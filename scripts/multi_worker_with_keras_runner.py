@@ -2,7 +2,7 @@ import sys
 import os
 import threading
 
-
+## just commenting
 node_str = sys.stdin.read().replace("\n","")
 nodes = node_str.split(' ')
 first = True
@@ -12,7 +12,7 @@ for node in nodes:
         node_string += ','
     node_string += '"' + node + ':12345"'
     first = False
-
+#commeting
 for i, node in enumerate(nodes):
     config = ('TF_CONFIG='+'\'"\'"\'{"cluster": {"worker": ['+node_string+']}, "task": {"index": '+str(i)+', "type": "worker"}}\'"\'"\'')
     print(node)
